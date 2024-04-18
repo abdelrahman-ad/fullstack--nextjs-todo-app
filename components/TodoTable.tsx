@@ -33,7 +33,7 @@ import DeletedTodo from "./DeletedTodo"
             <TableRow key={invoice?.id}>
               <TableCell className="font-medium">{invoice?.id}</TableCell>
               <TableCell>{invoice?.title}</TableCell>
-              <TableCell>{invoice.completed  ?   <Badge>Completed</Badge> :  <Badge variant="outline">Uncompleted</Badge>}</TableCell>
+              <TableCell>{invoice?.completed  ?   <Badge>Completed</Badge> :  <Badge variant="outline">Uncompleted</Badge>}</TableCell>
               <TableCell className="flex items-center space-x-2 justify-end">
  
                <DeletedTodo todo={invoice}   />
