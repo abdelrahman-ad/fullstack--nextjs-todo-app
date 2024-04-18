@@ -64,7 +64,7 @@ const EditTodo =({todo} : {todo :ITodos})=>{
           <DialogHeader>
             <DialogTitle>Edit profile</DialogTitle>
             <DialogDescription>
-              Make changes to your profile here. Click save when you are done.
+              Make changes to your profile here  Click save when you are done.
             </DialogDescription>
           </DialogHeader>
        
