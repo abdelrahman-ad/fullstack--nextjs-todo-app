@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider"
-import { ModeToggle } from "@/components/ModeToggle";
 import { ClerkProvider } from '@clerk/nextjs'
 import { Header } from "./NavClark";
 
@@ -20,10 +19,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-      <ClerkProvider>
-    <html lang="en">
-      <body className={inter.className}>
-    
+          <ClerkProvider afterSignInUrl="/" afterSignUpUrl="/"  >
+
+    <html lang="en" suppressHydrationWarning>
+      <body className={inter.className} >
       <ThemeProvider
             attribute="class"
             defaultTheme="system"
@@ -34,9 +33,9 @@ export default function RootLayout({
           <Header/>
         {children} 
         </ThemeProvider>
-     
         </body>
     </html>
-       </ClerkProvider>
+            </ClerkProvider>
+
   );
 }

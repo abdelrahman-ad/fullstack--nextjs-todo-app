@@ -12,7 +12,7 @@ import { ITodos } from "@/interfaces"
 const DeletedTodo =({todo}  : {todo :ITodos})=>{
       const [loading ,setLoading]=useState(false)
     return(
-        <>
+        <div>
             <EditTodo todo={todo} />
 
 
@@ -24,7 +24,7 @@ const DeletedTodo =({todo}  : {todo :ITodos})=>{
              } } >{loading ?<Spinner/> :   <Trash/>   }     </Button>
                 
                 
-        </>
+        </div>
     )
 }
 

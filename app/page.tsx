@@ -18,9 +18,12 @@ export default async function Home() {
   return (
    
     <main className="container">
+            <div className="mx-auto flex w-full lg:w-3/4 flex-col justify-center space-y-4 mt-10">
+
            <TodoForm userId={userId} />
-        <TableDemo todos={todos} />
-    
+
+           <TableDemo todos={todos} />
+          </div>
     </main> 
   );
 }
