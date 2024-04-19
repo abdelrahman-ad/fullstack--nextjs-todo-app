@@ -29,7 +29,7 @@ import DeletedTodo from "./DeletedTodo"
           </TableRow>
         </TableHeader>
         <TableBody>
-          {  todos.map((invoice) => (
+          {!todos?.length ? "no todo":  todos.map((invoice) => (
             <TableRow key={invoice?.id}>
               <TableCell className="font-medium">{invoice?.id}</TableCell>
               <TableCell>{invoice?.title}</TableCell>

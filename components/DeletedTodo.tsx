@@ -1,5 +1,5 @@
 'use client'
-import { Pen, Trash } from "lucide-react"
+import { Box, Pen, Trash } from "lucide-react"
 import Spinner from "./Spinner"
 import { Button } from "./ui/button"
 import { deleteTodoAction } from "@/actions/todo.action"
@@ -12,8 +12,8 @@ import { ITodos } from "@/interfaces"
 const DeletedTodo =({todo}  : {todo :ITodos})=>{
       const [loading ,setLoading]=useState(false)
     return(
-        <div>
-            <EditTodo todo={todo} />
+        <div className="space-x-2">
+            <EditTodo todo={todo}   />
 
 
 

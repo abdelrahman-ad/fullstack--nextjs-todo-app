@@ -47,8 +47,9 @@ const TodoForm =({userId} : {userId : string |null} )=>{
       })
 
       const onSubmit =({title ,body ,completed} :TodoFormValues )=>{
-        createTodoAction({title  , body  , completed , userId}  )
         setLoading(true)
+        createTodoAction({title  , body  , completed , userId}  )
+        setLoading(false)
         setOpen(false)
 
       }

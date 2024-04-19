@@ -7,7 +7,8 @@ import { auth } from "@clerk/nextjs";
 
 
 export default async function Home() {
-  const {userId} = auth()
+  const {userId } = auth()
+  
   const todos = await getTodoAction({userId})
 
  

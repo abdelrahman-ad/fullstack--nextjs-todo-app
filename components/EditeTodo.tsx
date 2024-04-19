@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/form"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button";
-import { Pen, Plus } from "lucide-react";
+import { Box, Pen, Plus } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -68,7 +68,7 @@ const EditTodo =({todo} : {todo :ITodos})=>{
             </DialogDescription>
           </DialogHeader>
        
-          <div className="grid gap-4 py-4">
+          <Box className="grid gap-4 py-4">
           <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
             <FormField
@@ -113,13 +113,13 @@ const EditTodo =({todo} : {todo :ITodos})=>{
             name="completed"
             render={({ field }) => (
               <FormItem>
-              <div className="flex items-center space-x-2">
+              <Box className="flex items-center space-x-2">
 
                 <FormControl>
                 <Checkbox     checked={field.value} onCheckedChange={field.onChange}  />
                 </FormControl>
                <FormLabel>completed </FormLabel>
-               </div>
+               </Box>
                <FormDescription>
                 your todo item will be uncompleted by default unless you chang it
                </FormDescription>
@@ -136,7 +136,7 @@ const EditTodo =({todo} : {todo :ITodos})=>{
           </form>
           </Form>
   
-          </div>
+          </Box>
   
         
         </DialogContent>
